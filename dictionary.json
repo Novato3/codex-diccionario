@@ -1,0 +1,58 @@
+[
+  {
+    "term": "foreach",
+    "definition": "Recorre todos los elementos de una colección.",
+    "category": "C#",
+    "tags": ["colecciones", "iteración"],
+    "language": "csharp",
+    "code": "foreach (var elemento in coleccion)\n{\n    Console.WriteLine(elemento);\n}"
+  },
+  {
+    "term": "array_map()",
+    "definition": "Aplica una función a cada elemento de un array.",
+    "category": "PHP",
+    "tags": ["arrays", "funciones"],
+    "language": "php",
+    "code": "$resultado = array_map(fn($valor) => $valor * 2, $numeros);"
+  },
+  {
+    "term": "list comprehension",
+    "definition": "Permite crear listas de manera compacta.",
+    "category": "Python",
+    "tags": ["listas", "sintaxis"],
+    "language": "python",
+    "code": "cuadrados = [numero ** 2 for numero in numeros]"
+  },
+  {
+    "term": "querySelector()",
+    "definition": "Selecciona el primer elemento HTML que coincide con un selector CSS.",
+    "category": "JavaScript",
+    "tags": ["DOM", "selectores"],
+    "language": "javascript",
+    "code": "const boton = document.querySelector('.boton');"
+  },
+  {
+    "term": "color",
+    "definition": "Propiedad CSS que cambia el color del texto de un elemento.",
+    "category": "CSS",
+    "tags": ["color", "estilos"],
+    "language": "css",
+    "code": ".titulo {\n  color: #00a8ff;\n}"
+  },
+  {
+    "term": "tipo de letra",
+    "definition": "Concepto relacionado con font-family, que define la familia tipográfica del texto.",
+    "category": "CSS",
+    "tags": ["CSS", "tipografia"],
+    "language": "css",
+    "code": "body {\n  font-family: Arial, sans-serif;\n}"
+  },
+  {
+    "term": "SELECT",
+    "definition": "Instrucción SQL que consulta datos de una o varias tablas.",
+    "category": "SQL",
+    "tags": ["consultas", "bases de datos"],
+    "language": "sql",
+    "code": "SELECT nombre, email\nFROM usuarios\nWHERE activo = true;"
+  }
+]
