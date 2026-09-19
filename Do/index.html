@@ -1,0 +1,449 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CodeX | Diccionario de Código</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css">
+</head>
+
+<body>
+
+    <!-- Fondo decorativo -->
+    <div class="background-grid"></div>
+    <div class="glow glow-blue"></div>
+    <div class="glow glow-purple"></div>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <div class="logo">
+            <span>&lt;</span> Code<span>X</span> <span>&gt;</span>
+        </div>
+
+        <nav>
+            <a href="#" class="active">Inicio</a>
+            <a href="#diccionario">Diccionario</a>
+            <a href="#favoritos">Favoritos</a>
+            <a href="#lenguajes">Lenguajes</a>
+            <a href="#gestion">Gestionar</a>
+        </nav>
+
+        <div class="nav-actions">
+            <button class="icon-button" type="button" data-action="tema" aria-label="Cambiar tema">◐</button>
+            <button class="profile-button" type="button" data-action="arriba">Inicio</button>
+        </div>
+
+    </header>
+
+
+    <!-- HERO -->
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <div class="status">
+                    <span class="status-dot"></span>
+                    SISTEMA ONLINE
+                </div>
+
+                <h1>
+                    Diccionario de
+                    <span>Código</span>
+                </h1>
+
+                <p>
+                    Encuentra comandos, funciones, conceptos y ejemplos
+                    de programación en un solo lugar.
+                </p>
+
+                <!-- BUSCADOR -->
+                <div class="search-box">
+
+                    <span class="search-icon">⌕</span>
+
+                    <input
+                        id="buscador"
+                        type="search"
+                        placeholder='Buscar término, definición o categoría...'
+                        autocomplete="off"
+                    >
+
+                    <button type="button" id="boton-buscar">Buscar</button>
+
+                </div>
+
+                <div class="search-hint">
+                    Presiona <kbd>ENTER</kbd> para buscar
+                </div>
+
+                <section class="hero-results" id="hero-results" aria-live="polite" hidden>
+                    <div class="hero-results-header">
+                        <div>
+                            <span class="section-tag">// RESULTADOS</span>
+                            <h2>Coincidencias encontradas</h2>
+                        </div>
+                        <button class="close-results" id="cerrar-resultados" type="button" aria-label="Cerrar resultados">×</button>
+                    </div>
+                    <div class="code-list" id="hero-results-list"></div>
+                    <p class="empty-state" id="hero-results-empty" hidden></p>
+                </section>
+
+            </div>
+
+        </section>
+
+
+        <!-- ESTADISTICAS -->
+        <section class="stats">
+
+            <div class="stat-card">
+                <div class="stat-icon blue">&lt;/&gt;</div>
+
+                <div>
+                    <strong>1,250+</strong>
+                    <span>Códigos</span>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon purple">◈</div>
+
+                <div>
+                    <strong>12</strong>
+                    <span>Lenguajes</span>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon green">✓</div>
+
+                <div>
+                    <strong>850+</strong>
+                    <span>Ejemplos</span>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- LENGUAJES -->
+        <section class="languages" id="lenguajes">
+
+            <div class="section-header">
+
+                <div>
+                    <span class="section-tag">// EXPLORAR</span>
+
+                    <h2>
+                        Lenguajes de programación
+                    </h2>
+                </div>
+
+                <a href="#" class="view-all">
+                    Ver todos →
+                </a>
+
+            </div>
+
+
+            <div class="language-grid" id="language-grid">
+
+                <!-- C# -->
+                <article class="language-card">
+
+                    <div class="language-top">
+                        <div class="language-logo csharp">
+                            C#
+                        </div>
+
+                        <span class="arrow">↗</span>
+                    </div>
+
+                    <h3>C#</h3>
+
+                    <p>
+                        Lenguaje moderno de Microsoft para aplicaciones,
+                        web y videojuegos.
+                    </p>
+
+                    <div class="language-footer">
+                        <span>245 códigos</span>
+                        <span class="dot"></span>
+                        <span>35 ejemplos</span>
+                    </div>
+
+                </article>
+
+
+                <!-- PHP -->
+                <article class="language-card">
+
+                    <div class="language-top">
+                        <div class="language-logo php">
+                            PHP
+                        </div>
+
+                        <span class="arrow">↗</span>
+                    </div>
+
+                    <h3>PHP</h3>
+
+                    <p>
+                        Lenguaje utilizado principalmente para desarrollo
+                        web del lado del servidor.
+                    </p>
+
+                    <div class="language-footer">
+                        <span>198 códigos</span>
+                        <span class="dot"></span>
+                        <span>42 ejemplos</span>
+                    </div>
+
+                </article>
+
+
+                <!-- PYTHON -->
+                <article class="language-card">
+
+                    <div class="language-top">
+                        <div class="language-logo python">
+                            Py
+                        </div>
+
+                        <span class="arrow">↗</span>
+                    </div>
+
+                    <h3>Python</h3>
+
+                    <p>
+                        Lenguaje sencillo y potente utilizado en web,
+                        automatización, datos e IA.
+                    </p>
+
+                    <div class="language-footer">
+                        <span>312 códigos</span>
+                        <span class="dot"></span>
+                        <span>64 ejemplos</span>
+                    </div>
+
+                </article>
+
+
+                <!-- JAVASCRIPT -->
+                <article class="language-card">
+
+                    <div class="language-top">
+                        <div class="language-logo javascript">
+                            JS
+                        </div>
+
+                        <span class="arrow">↗</span>
+                    </div>
+
+                    <h3>JavaScript</h3>
+
+                    <p>
+                        Lenguaje esencial para crear experiencias
+                        interactivas en la web.
+                    </p>
+
+                    <div class="language-footer">
+                        <span>280 códigos</span>
+                        <span class="dot"></span>
+                        <span>51 ejemplos</span>
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <section class="category-modal" id="category-modal" role="dialog" aria-modal="true" aria-labelledby="category-modal-title" hidden>
+            <div class="category-modal-content">
+                <div class="category-modal-header">
+                    <div>
+                        <span class="section-tag">// CATEGORÍA</span>
+                        <h2 id="category-modal-title"></h2>
+                    </div>
+                    <button class="close-results" id="cerrar-categoria" type="button" aria-label="Cerrar categoría">×</button>
+                </div>
+                <div class="code-list" id="category-modal-list"></div>
+                <p class="empty-state" id="category-modal-empty" hidden>Aún no hay términos en esta categoría.</p>
+            </div>
+        </section>
+
+
+        <!-- ULTIMOS CODIGOS -->
+        <section class="recent" id="diccionario">
+
+            <div class="section-header">
+
+                <div>
+                    <span class="section-tag">// RECIENTES</span>
+
+                    <h2>
+                        Código agregado recientemente
+                    </h2>
+                </div>
+
+                <a href="#" class="view-all">
+                    Ver diccionario →
+                </a>
+
+            </div>
+
+
+            <div class="code-list" id="code-list">
+
+                <article class="code-item">
+
+                    <div class="code-info">
+
+                        <div class="code-language">C#</div>
+
+                        <div>
+                            <h3>foreach</h3>
+
+                            <p>
+                                Recorre todos los elementos de una colección.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <button class="copy-button">
+                        Copiar código
+                    </button>
+
+                </article>
+
+
+                <article class="code-item">
+
+                    <div class="code-info">
+
+                        <div class="code-language php-tag">PHP</div>
+
+                        <div>
+                            <h3>array_map()</h3>
+
+                            <p>
+                                Aplica una función a cada elemento de un array.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <button class="copy-button">
+                        Copiar código
+                    </button>
+
+                </article>
+
+
+                <article class="code-item">
+
+                    <div class="code-info">
+
+                        <div class="code-language python-tag">PY</div>
+
+                        <div>
+                            <h3>list comprehension</h3>
+
+                            <p>
+                                Permite crear listas de manera compacta.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <button class="copy-button">
+                        Copiar código
+                    </button>
+
+                </article>
+
+            </div>
+
+            <p class="empty-state" id="empty-state" hidden>No se encontraron términos.</p>
+
+        </section>
+
+        <section class="recent favorites-section" id="favoritos">
+            <div class="section-header">
+                <div>
+                    <span class="section-tag">// GUARDADOS</span>
+                    <h2>Favoritos</h2>
+                </div>
+            </div>
+            <div class="code-list" id="favorites-list"></div>
+            <p class="empty-state" id="favorites-empty">Aún no tienes términos favoritos.</p>
+        </section>
+
+        <section class="dictionary-tools" id="gestion">
+            <div class="section-header">
+                <div>
+                    <span class="section-tag">// GESTIONAR</span>
+                    <h2>Agregar y exportar términos</h2>
+                </div>
+            </div>
+
+            <form class="term-form" id="term-form">
+                <label>Término <input name="term" required maxlength="80" placeholder="Ej: flexbox"></label>
+                <label>Categoría <input name="category" required maxlength="40" placeholder="Ej: CSS"></label>
+                <label>Etiquetas <input name="tags" maxlength="160" placeholder="CSS, Flexbox, Centrado"></label>
+                <label class="wide-field">Código <textarea name="code" required maxlength="1000" placeholder=".contenedor { display: flex; }"></textarea></label>
+                <label class="wide-field">Definición <textarea name="definition" required maxlength="240" placeholder="Explica qué hace..."></textarea></label>
+                <button class="primary-button" type="submit">Agregar término</button>
+            </form>
+
+            <div class="data-actions">
+                <button class="secondary-button" type="button" data-action="export-word">Exportar Word</button>
+                <button class="secondary-button" type="button" data-action="export-pdf">Exportar PDF</button>
+                <label class="file-button">Importar JSON/CSV<input id="import-file" type="file" accept=".json,.csv,application/json,text/csv"></label>
+                <span class="data-status" id="data-status" role="status"></span>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-logo">
+            &lt; Code<span>X</span> /&gt;
+        </div>
+
+        <p>
+            Diccionario de código para desarrolladores.
+        </p>
+
+        <span>
+            © 2026 CodeX
+        </span>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-csharp.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-css.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-python.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-clike.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-php.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-sql.min.js"></script>
+    <script src="codex.js"></script>
+
+</body>
+</html>
